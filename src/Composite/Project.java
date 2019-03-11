@@ -12,6 +12,16 @@ package Composite;
 public class Project {
     public static void main(String[] args) {
         Team team = new Team();
+      Developer javaDeveloper = new JavaDeveloper();
+      Developer phpDeveloper = new PhpDeveloper();
+       Developer pythonDeveloper = new PythonDeveloper();
+        Developer ciPlusDeveloper = new CiPlusDeveloper();
         
+      
+     team.addDeveloper(javaDeveloper);
+     team.addDeveloper(phpDeveloper);
+     team.addDeveloper(pythonDeveloper);
+     team.addDeveloper(ciPlusDeveloper);
+     team.createProject();
     }
 }

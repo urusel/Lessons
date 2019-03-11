@@ -3,19 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Composite;
+package Strategy1;
 
 /**
  *
  * @author user
  */
-public class JavaDeveloper implements Developer{
+public class Sending implements Activity{
     
-   
-
-    @Override
-    public void writeCode() {
-        System.out.println("Java developer writes java code...");
-    }
-    
+ @Override
+ public void justDolt(){
+     System.out.println("sending code to GitHub....");
+ }
 }

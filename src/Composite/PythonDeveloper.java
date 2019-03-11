@@ -9,13 +9,13 @@ package Composite;
  *
  * @author user
  */
-public class JavaDeveloper implements Developer{
+public class PythonDeveloper implements Developer{
     
    
 
     @Override
     public void writeCode() {
-        System.out.println("Java developer writes java code...");
+        System.out.println("Python developer writes python code...");
     }
     
 }

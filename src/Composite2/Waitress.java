@@ -3,19 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Composite;
+package Composite2;
 
 /**
  *
  * @author user
  */
-public class JavaDeveloper implements Developer{
-    
-   
-
-    @Override
-    public void writeCode() {
-        System.out.println("Java developer writes java code...");
+public class Waitress {
+   MenuComponent allMenus; 
+   public Waitress(MenuComponent allMenus){
+        this.allMenus = allMenus;
     }
-    
+    public void printMenu(){
+      allMenus.print();
+    }
 }
