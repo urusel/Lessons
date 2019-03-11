@@ -38,12 +38,12 @@ public class MenuItem extends MenuComponent{
         return vegetarian;
     }
       public void print(){
-          System.out.println("  " + getName());
+          System.out.print("  " + getName());
           if(isVegetarian()){
-          System.out.println("(v) ");
+          System.out.print("(v) ");
           }
           System.out.println(", " + getPrice());
-          System.out.println("        --" + getDescription());
+          System.out.println("        -- " + getDescription());
 }
 
 
