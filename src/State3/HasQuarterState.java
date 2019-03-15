@@ -11,47 +11,50 @@ import java.util.Random;
  *
  * @author user
  */
-public class HasQuarterState implements State{
-    Random randomWinner = Random(System.currentTimeMillis());
+public class HasQuarterState implements State {
+
+    Random randomWinner = new Random(System.currentTimeMillis());
     GumballMachine gumballMachine;
-    
-    public HasQuarterState(GumballMachine gumballMachine){
+
+    public HasQuarterState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;
     }
-    
+
     @Override
-    public void insertQuarter(){
-        System.out.println("You can't insert another quarter");
+    public void insertQuarter() {
+        System.out.println("You can not insert another quarter");
     }
-    
+
     @Override
-    public void ejectQuarter(){
+    public void ejectQuarter() {
         System.out.println("Quarter returned");
         gumballMachine.setState(gumballMachine.getNoQuarterState());
     }
-    
+
     @Override
-    public void turnCrnk() {
-        System.out.println("You turned....");
+    public void turnCrank() {
+        System.out.println("You turned...");
         int winner = randomWinner.nextInt(10);
-        if ((winner==0)&&(gumballMachine.getCount()>1)){
-         gumballMachine.setState(gumballMachine.getWinnerState());    
-        }else{
-             gumballMachine.setState(gumballMachine.getSoldState());
+        if ((winner == 0) && (gumballMachine.getCount() > 1)) {
+            gumballMachine.setState(gumballMachine.getWinnerState());
+        } else {
+            gumballMachine.setState(gumballMachine.getSoldState());
         }
     }
-    
+
     @Override
-    public void dispense(){
-    System.out.println("No gumball dispensed");    
-    } 
+    public void dispense() {
+        System.out.println("No gumball dispensed");
+    }
+
     @Override
-    public void refill(){}
-    
+    public void refill() {
+    }
+
     @Override
-    public String toString(){
+    public String toString() {
         return "waiting for turn of crank";
+
     }
 
 }
-

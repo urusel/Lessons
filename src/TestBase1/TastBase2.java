@@ -3,19 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package State3;
 
 /**
  *
  * @author user
  */
-public interface State {
-    
-    public void insertQuarter();
-    public void ejectQuarter();
-    public void turnCrank();
-    public void dispense();
-    
-    public void refill();
+public class TastBase2 {
     
 }

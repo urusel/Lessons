@@ -7,6 +7,8 @@ package MVC1.view;
 
 import MVC1.controller.Controller;
 import MVC1.model.Model;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -55,4 +57,12 @@ public class SwingView implements ActionListener, View{
        
    }
    private void initComponents(){
+       frame= new JFrame("List");
+       frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+       JPanel mainPanel= new JPanel();
+       mainPanel.setLayout(new FlowLayout());
+       frame.setSize(new Dimension(500,150));
+       frame.setContentPane(mainPanel);
+       
+   }
 }

@@ -5,6 +5,7 @@
  */
 package MVC1.controller;
 
+import MVC1.model.Model;
 import javax.swing.text.View;
 
 /**

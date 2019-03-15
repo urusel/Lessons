@@ -10,6 +10,7 @@ package State3;
  * @author user
  */
 public class GumballMachine {
+    
 	State soldOutState;
 	State noQuarterState;
 	State hasQuarterState;
@@ -20,7 +21,7 @@ public class GumballMachine {
  
 	public GumballMachine(int numberGumballs) {
 		soldOutState = new SoldOutState(this);
-		noQuarterState = new NoQuarterState(this);
+		noQuarterState = new NoGuarterState(this);
 		hasQuarterState = new HasQuarterState(this);
 		soldState = new SoldState(this);
 		winnerState = new WinnerState(this);
@@ -97,10 +98,4 @@ public class GumballMachine {
 		result.append("Machine is " + state + "\n");
 		return result.toString();
 	}
-
-    State getNoQuarteState() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
-
-
