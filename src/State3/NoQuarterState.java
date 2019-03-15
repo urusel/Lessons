@@ -28,23 +28,25 @@ public class NoQuarterState implements State{
     }
     
     @Override
-    public void turnCrank(){
+    public void turnCrnk() {
         System.out.println("You turned, but there's no quarter");
         
        
     }
     
-    @Override
-    public void dispense(){
+    public void dispense() {
     System.out.println("You need to pay first");    
     } 
     @Override
-    public void refill(){}
-}
+    public void refill(){ }
+
     @Override
-    publicSt String toString(){
-        return "waiting for turn for quarter";
+    public String toString(){
+        return "waiting for turn of crank";
     }
+
+    
+
 }
 
 

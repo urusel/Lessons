@@ -97,6 +97,10 @@ public class GumballMachine {
 		result.append("Machine is " + state + "\n");
 		return result.toString();
 	}
+
+    State getNoQuarteState() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
 
 

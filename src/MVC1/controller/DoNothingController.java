@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package State3;
+package MVC1.controller;
 
 /**
  *
  * @author user
  */
-public interface State {
-   
-    public void insertQuarter();
-    public void ejectQuarter();
-    public void turnCrnk();
-    public void refill();
-
-    public void turnCrank();
-
-    public void dispense();
+public class DoNothingController extends AbstractController{
+     @Override
+public void addAction(String text){
+    
 }
+ @Override
+public void removeAction(String text){
+   
+}
+}
+

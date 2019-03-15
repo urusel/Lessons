@@ -9,43 +9,56 @@ package State3;
  *
  * @author user
  */
-public class WinnerState implements State{
-    GumballMachinegu gumballMachinegu;
-    
-    public WinnerState(GumballMachine gumballMachine){
+public class WinnerState implements State {
+
+    GumballMachine gumballMachinegu;
+
+    public WinnerState(GumballMachine gumballMachine) {
         this.gumballMachinegu = gumballMachine;
     }
-    
-     @Override
-    public void insertQuarter(){
-        System.out.println("Please wait,we're already giving you a Gumball");
-    }
-    
-    @Override
-    public void ejectQuarter(){
-        System.out.println("Please wait,we're already giving you a Gumball");
-       
-    }
-    
-    @Override
-    public void turnCrank(){
-        System.out.println("Turning again does't get you another gumball");
-        
-       
-    }
-    
-    @Override
-    public void dispense(){
-    System.out.println("You need to pay first");    
-    } 
-    @Override
-    public void refill(){}
-}
-    @Override
-    publicSt String toString(){
-        return "waiting for turn for quarter";
-    }
-}
 
+    @Override
+    public void insertQuarter() {
+        System.out.println("Please wait,we're already giving you a Gumball");
+    }
+
+    @Override
+    public void ejectQuarter() {
+        System.out.println("Please wait,we're already giving you a Gumball");
+
+    }
+
+    @Override
+    public void turnCrnk() {
+        System.out.println("Turning again does't get you another gumball");
+
+    }
+
+    @Override
+    public void dispense() {
+        GumballMachine.releaseBall();
+        if (gumballMachine.getCount() == 0) {
+            gumballMachine.setState(gumballMachine.getSolOutState());
+        } else {
+            gumballMachine.releaseBall();
+            System.out.println("YOU'RE A WINNER! You got two gumballs for your quarter");
+        }  
+            if (gumballMachine.getCount() > 0) {
+                GumballMachine.setState(gumballMachine.getNoQuarterState());
+            } else {
+                System.out.println("Oops, out of gumballs!");
+                gumballMachine.setState(gumballMachine.getSoldOutState());
+
+            }
+        }
     
+
+    @Override
+    public void refill() {
+    }
+
+    @Override
+    public String toString() {
+        return "despensing two gumballs for your quarter, because YOU'RE A WINNER!";
+    }
 }
